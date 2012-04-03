@@ -1,6 +1,6 @@
 <?php
 
-namespace Highco\Bundle\CurlBundle;
+namespace Highco\CurlBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

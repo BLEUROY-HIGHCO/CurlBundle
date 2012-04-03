@@ -1,6 +1,6 @@
 <?php
 
-namespace Highco\Bundle\CurlBundle\Adapter;
+namespace Highco\CurlBundle\Adapter;
 
 interface ICurl
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Highco\Bundle\CurlBundle\Adapter;
+namespace Highco\CurlBundle\Adapter;
 
-use Highco\Bundle\CurlBundle\Util\Curl as CurlCaller;
+use Highco\CurlBundle\Util\Curl as CurlCaller;
 
 /**
  * DefaultCurl
@@ -11,19 +11,26 @@ use Highco\Bundle\CurlBundle\Util\Curl as CurlCaller;
  * @package
  * @version $id$
  * @author Stephane PY <s.py@groupe-highco.com>
+ * @author Nikola Petkanski <nikola@petkanski.com>
  */
 class DefaultCurl extends AbstractCurl implements ICurl
 {
     protected static $default_opts = array(
-        CURLOPT_HEADER         => 1,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 30,
-        CURLOPT_CONNECTTIMEOUT => 5
+        CURLOPT_HEADER          => 1,
+        CURLOPT_RETURNTRANSFER  => true,
+        CURLOPT_TIMEOUT         => 30,
+        CURLOPT_CONNECTTIMEOUT  => 5,
+        CURLOPT_FORBID_REUSE    => true,
+        CURLOPT_FRESH_CONNECT   => true,
+        CURLOPT_FOLLOWLOCATION  => true,
+        CURLOPT_MAXREDIRS       => 5,
+        CURLOPT_ENCODING        => '',
+        CURLOPT_USERAGENT       => 'Highco\CurlBundle',
     );
 
     public function call($url, $method, $parameters = array(), $curl_options = array())
     {
-        $opts   = $curl_options+ self::$default_opts;
+        $opts   = $curl_options + self::$default_opts;
 
         switch($method)
         {
