@@ -1,6 +1,6 @@
 <?php
 
-namespace Highco\Bundle\CurlBundle\Features\Context;
+namespace Highco\CurlBundle\Features\Context;
 
 use Behat\BehatBundle\Context\BehatContext,
     Behat\BehatBundle\Context\MinkContext;
@@ -9,7 +9,7 @@ use Behat\Behat\Context\ClosuredContextInterface,
     Behat\Behat\Exception\PendingException;
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
-use Highco\Bundle\CurlBundle\Util\ResultAtom;
+use Highco\CurlBundle\Util\ResultAtom;
 
 require_once 'PHPUnit/Autoload.php';
 require_once 'PHPUnit/Framework/Assert/Functions.php';

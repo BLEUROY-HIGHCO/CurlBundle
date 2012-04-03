@@ -1,6 +1,6 @@
 <?php
 
-namespace Highco\Bundle\CurlBundle\Util;
+namespace Highco\CurlBundle\Util;
 
 class CurlMulti
 {

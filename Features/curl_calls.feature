@@ -2,7 +2,7 @@ Feature: Curl GET
   I want to use GET http request to call page
 
   Scenario: HEADER on google
-    Given I use adapter "Highco\Bundle\CurlBundle\Adapter\DefaultCurl"
+    Given I use adapter "Highco\CurlBundle\Adapter\DefaultCurl"
     And I call url "http://www.google.fr"
     And I use "GET" http request
     When I execute curl action
